@@ -6,11 +6,11 @@ export default function FooterSection() {
   return (
     <Footer.Root>
       <div
-        className={"grid gap-8 lg:grid-cols-[320px_minmax(0,_1fr)] lg:gap-16"}
+        className={"grid gap-8 lg:grid-cols-[320px_minmax(0,_1fr)] lg:justify-between lg:gap-16"}
       >
         <Footer.Container className={"max-w-80"}>
-          <Link href={"/"} className={"flex items-center gap-2"}>
-            <Icons.logo className={"size-7.5"} />
+          <Link href={"/public"} className={"flex items-center gap-2"}>
+            <Icons.logo className={"size-7.5  "} />
             <p className={"text-lg font-semibold"}>Scalekit</p>
           </Link>
           <Footer.Description>
@@ -20,9 +20,9 @@ export default function FooterSection() {
         </Footer.Container>
 
         <Footer.Container
-          className={"grid grid-cols-2 justify-between lg:grid-cols-4"}
+          className={"grid grid-cols-2 justify-between lg:grid-cols-3"}
         >
-          <div className={"flex min-w-24 flex-col space-y-4"}>
+          <div className={"flex min-w-24 flex-col space-y-4 lg:justify-self-end"}>
             <p className={"text-sm/5 font-semibold text-neutral-500"}>
               Product
             </p>
@@ -34,7 +34,7 @@ export default function FooterSection() {
               <Footer.FooterLink href="/overview">Releases</Footer.FooterLink>
             </div>
           </div>
-          <div className={"flex min-w-24 flex-col space-y-4"}>
+          <div className={"flex min-w-24 flex-col space-y-4 lg:justify-self-end"}>
             <p className={"text-sm/5 font-semibold text-neutral-500"}>
               Product
             </p>
@@ -46,7 +46,7 @@ export default function FooterSection() {
               <Footer.FooterLink href="/overview">Releases</Footer.FooterLink>
             </div>
           </div>
-          <div className={"flex min-w-24 flex-col space-y-4"}>
+          <div className={"flex min-w-24 flex-col space-y-4 lg:justify-self-end"}>
             <p className={"text-sm/5 font-semibold text-neutral-500"}>
               Product
             </p>

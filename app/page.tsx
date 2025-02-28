@@ -1,21 +1,23 @@
-import FeaturesSection from "@/components/section/features-section"
-import HeroSection from "@/components/section/hero-section"
-import TestimonialsSection from "@/components/section/testimonials-section"
+import FeaturesSection from "@/components/section/features/features-section"
+import HeroSectionOne from "@/components/section/hero/hero-section-one"
+import TestimonialsSection from "@/components/section/testimonials/testimonials-section"
 import TopUsersSection from "@/components/section/top-users-section"
-import FaqSection from "@/components/section/faq-section"
-import FooterSection from "@/components/section/footer-section"
+import FaqSectionOne from "@/components/section/faq/faq-section-one"
+import FooterSection from "@/components/section/footer/footer-section"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { SectionHeader } from "@/components/section-header"
 import { Button } from "@/components/ui/button"
+import PricingSection from "@/components/section/pricing/pricing-section"
 
 export default function Home() {
   return (
     <main className="mb-10">
-      <HeroSection />
+      <HeroSectionOne />
       <TopUsersSection />
       <FeaturesSection />
-      <FaqSection />
+      <FaqSectionOne />
       <TestimonialsSection />
+      <PricingSection />
       <SectionWrapper>
         <SectionHeader.Root>
           <SectionHeader.Container>
@@ -26,9 +28,21 @@ export default function Home() {
               Join over 4,000+ startups already growing with Untitled.
             </SectionHeader.Description>
 
-            <div className={"flex flex-col gap-3 lg:flex-row items-center justify-center mt-2"}>
-              <Button size={"lg"} className={"w-full lg:w-fit"}>Get started</Button>
-              <Button size={"lg"} className={"w-full lg:w-fit"} variant={"outline"}>Learn more</Button>
+            <div
+              className={
+                "mt-2 flex flex-col items-center justify-center gap-3 lg:flex-row"
+              }
+            >
+              <Button size={"lg"} className={"w-full lg:w-fit"}>
+                Get started
+              </Button>
+              <Button
+                size={"lg"}
+                className={"w-full lg:w-fit"}
+                variant={"outline"}
+              >
+                Learn more
+              </Button>
             </div>
           </SectionHeader.Container>
         </SectionHeader.Root>

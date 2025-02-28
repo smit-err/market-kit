@@ -1,5 +1,16 @@
-import React from "react"
+import React, { ComponentType } from "react"
 import { Icons } from "@/components/icons"
+import {
+  Command,
+  FileCheck2,
+  Layers2,
+  MessageCircleHeart,
+  MessagesSquare,
+  Smile,
+  Zap,
+} from "lucide-react"
+import { buttonVariants } from "@/components/ui/button"
+import { type VariantProps } from "class-variance-authority"
 
 export interface testimonialProps {
   logo?: React.ReactNode
@@ -20,10 +31,67 @@ export interface NavLinkProps {
   href: string
 }
 
-export const navItems:NavLinkProps[] = [
+export const navItems: NavLinkProps[] = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
+]
+
+export interface PricingPlan {
+  plan_title: string
+  plan_price: string
+  plan_description?: string
+  plan_icon?: ComponentType<{ className?: string }>
+  plan_check_items: string[]
+  plan_button_text: string
+  plan_custom_class?: string
+  plan_button_variant?: VariantProps<typeof buttonVariants>["variant"]
+  plan_button_href: string
+}
+
+export interface FeatureTextProps {
+  icon: ComponentType<{ className?: string }>
+  title: string
+  description: string
+}
+
+export const FeatureTextData: FeatureTextProps[] = [
+  {
+    icon: MessagesSquare,
+    title: "Share team inboxes",
+    description:
+      "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
+  },
+  {
+    icon: Zap,
+    title: "Deliver instant answers",
+    description:
+      "An all-in-one customer service platform that helps you balance everything your customers need to be happy.",
+  },
+  {
+    icon: FileCheck2,
+    title: "Manage your team with reports",
+    description:
+      "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
+  },
+  {
+    icon: Smile,
+    title: "Connect with customers",
+    description:
+      "Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.",
+  },
+  {
+    icon: Command,
+    title: "Connect the tools you already use",
+    description:
+      "Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools.",
+  },
+  {
+    icon: MessageCircleHeart,
+    title: "Our people make the difference",
+    description:
+      "We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.",
+  },
 ]
 
 export const FaqData: FaqProps[] = [
@@ -86,5 +154,39 @@ export const testimonialsData: testimonialProps[] = [
     author_name: "Mathilde Lewis",
     author_image_fallback: "ML",
     author_role: "Project Lead, Stack3d Lab",
+  },
+]
+
+export const PricingData: PricingPlan[] = [
+  {
+    plan_title: "Basic plan",
+    plan_price: "$10/mth",
+    plan_description: "Billed annually",
+    plan_icon: Zap, // Now correctly typed as a component
+    plan_check_items: [
+      "Access to all basic features",
+      "Basic reporting and analytics",
+      "Up to 10 individual users",
+      "20 GB individual data each user",
+      "Basic chat and email support",
+    ],
+    plan_button_text: "Get started",
+    plan_button_variant: "outline",
+    plan_button_href: "#",
+  },
+  {
+    plan_title: "Business plan",
+    plan_price: "$20/mth",
+    plan_description: "Billed annually",
+    plan_icon: Layers2, // Now correctly typed as a component
+    plan_check_items: [
+      "200+ integrations",
+      "Advanced reporting",
+      "Up to 20 individual users",
+      "40 GB individual data each user",
+      "Priority chat and email support",
+    ],
+    plan_button_text: "Get started",
+    plan_button_href: "#",
   },
 ]

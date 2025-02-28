@@ -1,6 +1,8 @@
 import React from "react"
-import { SectionHeader } from "../section-header"
-import FeatureCard from "../feature-card"
+import { SectionHeader } from "../../section-header"
+import FeatureText from "@/components/section/features/feature-text"
+import { MessagesSquare } from "lucide-react"
+import { FeatureTextData } from "@/data/data"
 
 function FeaturesSection() {
   return (
@@ -20,11 +22,22 @@ function FeaturesSection() {
           </SectionHeader.Description>
         </SectionHeader.Container>
       </SectionHeader.Root>
-      <div className="grid justify-center gap-8 lg:grid-cols-2">
-        <FeatureCard />
-        <FeatureCard />
-        <FeatureCard />
-        <FeatureCard />
+      <div className="grid justify-center gap-10 lg:gap=16 lg:grid-cols-3">
+        {
+          FeatureTextData.map((item, i) => {
+            return (
+              <FeatureText
+                key={i}
+                icon={item.icon}
+                title={item.title}
+                description={
+                  item.description
+                }
+              />
+            )
+          })
+        }
+
       </div>
     </section>
   )

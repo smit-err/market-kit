@@ -9,7 +9,7 @@ import { SectionWrapper } from "@/components/section-wrapper"
 
 import {FaqData} from "@/data/data"
 
-export default function FaqSection() {
+export default function FaqSectionOne() {
   return (
     <SectionWrapper>
       <SectionHeader.Root>

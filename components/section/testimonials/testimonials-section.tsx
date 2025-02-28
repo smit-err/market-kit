@@ -1,5 +1,5 @@
 import React from "react"
-import { SectionHeader } from "../section-header"
+import { SectionHeader } from "../../section-header"
 import Testimonial from "@/components/testimonial-card"
 import { testimonialsData } from "@/data/data"
 import { SectionWrapper } from "@/components/section-wrapper"
