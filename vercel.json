@@ -1,0 +1,9 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "staging": true,
+      "feature-new-section": false
+    }
+  }
+}
