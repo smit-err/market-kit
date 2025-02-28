@@ -1,8 +1,10 @@
-import { ComponentType } from "react"
 import { FeatureTextProps } from "@/data/data"
 
-
-export default function FeatureText({ icon, title, description }: FeatureTextProps) {
+export default function FeatureText({
+  icon,
+  title,
+  description,
+}: FeatureTextProps) {
   const Icon = icon
   return (
     <div
